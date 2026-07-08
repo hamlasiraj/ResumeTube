@@ -1,0 +1,17 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Settings screenshot placeholder">
+  <rect width="800" height="500" fill="#F7F7F7"/>
+  <rect x="24" y="24" width="752" height="452" rx="16" fill="none" stroke="#E5E5E5" stroke-width="2" stroke-dasharray="8 8"/>
+
+  <!-- generic image glyph -->
+  <g transform="translate(320,150)">
+    <rect x="0" y="0" width="160" height="112" rx="10" fill="none" stroke="#B8B8B8" stroke-width="3"/>
+    <circle cx="34" cy="34" r="12" fill="none" stroke="#B8B8B8" stroke-width="3"/>
+    <path d="M8 96L52 60L84 84L112 48L152 96" fill="none" stroke="#B8B8B8" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="80" cy="56" r="17" fill="#FF3B30"/>
+    <path d="M75 48L90 56L75 64Z" fill="#FFFFFF"/>
+  </g>
+
+  <text x="400" y="320" text-anchor="middle" font-family="'JetBrains Mono', 'SFMono-Regular', Consolas, monospace" font-size="14" letter-spacing="2" fill="#FF3B30">SCREENSHOT PLACEHOLDER</text>
+  <text x="400" y="352" text-anchor="middle" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="24" font-weight="600" fill="#111111">Settings</text>
+  <text x="400" y="380" text-anchor="middle" font-family="Inter, 'Segoe UI', sans-serif" font-size="13" fill="#8A8A8A">Replace this file to show the real screenshot</text>
+</svg>
