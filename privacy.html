@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Playlist Progress Saver</title>
+  <meta name="description" content="How Playlist Progress Saver handles your data." />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .legal-main { max-width: 720px; margin-inline: auto; padding: var(--space-12) var(--space-6); }
+    .legal-main h1 { font-size: var(--text-3xl); margin-bottom: var(--space-3); }
+    .legal-main .updated { color: var(--color-text-secondary); font-family: var(--font-mono); font-size: var(--text-sm); margin-bottom: var(--space-10); }
+    .legal-main h2 { font-size: var(--text-xl); margin-top: var(--space-8); margin-bottom: var(--space-3); }
+    .legal-main p, .legal-main li { color: var(--color-text-secondary); margin-bottom: var(--space-3); }
+    .legal-main ul { padding-left: var(--space-5); list-style: disc; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header is-scrolled">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <img class="logo-mark" src="assets/images/logo/icon128.png" alt="" width="121" height="99" />
+        Playlist Progress Saver
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#pricing">Pricing</a>
+        <a href="index.html#faq">FAQ</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="index.html" class="btn btn-primary">Back to Home</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="legal-main">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: January 2026</p>
+
+    <p>Playlist Progress Saver is built around a simple principle: your watch history belongs to you, and it stays on your own machine unless you choose otherwise.</p>
+
+    <h2>What we store</h2>
+    <ul>
+      <li>The playlist ID, video ID, and timestamp of playlists you choose to track.</li>
+      <li>Optional tags, categories, and colors you assign to a playlist.</li>
+      <li>Your Dark Mode / Light Mode preference.</li>
+    </ul>
+
+    <h2>Where it's stored</h2>
+    <p>All of the data above is saved locally in your browser's extension storage. Playlist Progress Saver does not run its own server and does not transmit your playlist data anywhere by default.</p>
+
+    <h2>Future cloud features</h2>
+    <p>Planned Premium features such as Cloud Sync and Automatic Backup will require explicit opt-in before any data leaves your browser. This policy will be updated before those features ship.</p>
+
+    <h2>Third parties</h2>
+    <p>Playlist Progress Saver does not sell, rent, or share your data with advertisers or analytics companies.</p>
+
+    <h2>Your data, your control</h2>
+    <p>Use the built-in Export feature at any time to download a full copy of your data as JSON, or uninstall the extension to remove all locally stored data.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy can be sent to <a href="mailto:privacy@playlistprogresssaver.com" style="color: var(--color-primary);">privacy@playlistprogresssaver.com</a>.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom" style="border-top: 1px solid var(--color-dark-border); padding-top: var(--space-6);">
+      <span>© <span id="year">2026</span> Playlist Progress Saver. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

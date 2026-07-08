@@ -1,0 +1,21 @@
+{
+  "name": "Playlist Progress Saver",
+  "short_name": "Progress Saver",
+  "description": "Remembers your exact playlist, video, and timestamp on YouTube so you can resume instantly.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ff3b30",
+  "icons": [
+    {
+      "src": "assets/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
