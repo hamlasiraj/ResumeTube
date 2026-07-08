@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>document.documentElement.classList.add('js');</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Playlist Progress Saver — Never Lose Your Place in YouTube Playlists</title>
@@ -567,5 +568,14 @@
   </button>
 
   <script src="script.js"></script>
+  <script>
+    // Independent failsafe: works even if script.js fails to load or throws,
+    // so scroll-reveal sections can never end up permanently blank.
+    setTimeout(function () {
+      document.querySelectorAll(".reveal:not(.is-visible)").forEach(function (el) {
+        el.classList.add("is-visible");
+      });
+    }, 2000);
+  </script>
 </body>
 </html>

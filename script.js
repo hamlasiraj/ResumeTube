@@ -39,6 +39,13 @@
       { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
     );
     revealEls.forEach((el) => observer.observe(el));
+
+    // Safety net: if any element never crosses the intersection threshold
+    // (e.g. an automated full-page screenshot that never truly scrolls),
+    // reveal everything after a short delay so content is never stuck hidden.
+    window.setTimeout(() => {
+      revealEls.forEach((el) => el.classList.add("is-visible"));
+    }, 1500);
   } else {
     revealEls.forEach((el) => el.classList.add("is-visible"));
   }
