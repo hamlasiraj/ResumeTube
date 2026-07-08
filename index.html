@@ -27,7 +27,7 @@
   <link rel="icon" href="favicon.ico" sizes="any" />
   <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
   <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#2563eb" />
+  <meta name="theme-color" content="#ff3b30" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -58,17 +58,7 @@
   <header class="site-header" id="site-header">
     <div class="container nav-inner">
       <a href="#top" class="logo" aria-label="Playlist Progress Saver home">
-        <svg class="logo-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="32" height="32" rx="8" fill="url(#navGrad)"/>
-          <path d="M12.5 10.5L21 15.7C21.7 16.1 21.7 17.1 21 17.5L12.5 22.7C11.8 23.1 11 22.6 11 21.8V11.4C11 10.6 11.8 10.1 12.5 10.5Z" fill="white"/>
-          <circle cx="20" cy="24" r="2" fill="#F59E0B"/>
-          <defs>
-            <linearGradient id="navGrad" x1="0" y1="0" x2="32" y2="32">
-              <stop stop-color="#2563EB"/>
-              <stop offset="1" stop-color="#3B82F6"/>
-            </linearGradient>
-          </defs>
-        </svg>
+        <img class="logo-mark" src="assets/images/logo/icon128.png" alt="" width="121" height="99" />
         Playlist Progress Saver
       </a>
 
@@ -80,7 +70,7 @@
       </nav>
 
       <div class="nav-actions">
-        <a href="#faq" class="btn btn-secondary">Support</a>
+        <a href="#support" class="btn btn-secondary">Support</a>
         <a href="#pricing" class="btn btn-primary">Add to Chrome</a>
         <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-header">
           <span class="nav-toggle-bar"></span>
@@ -98,14 +88,14 @@
         <div class="hero-copy">
           <span class="eyebrow">For every long-form learner on YouTube</span>
           <h1>Never Lose Your Place in <span class="highlight">YouTube Playlists</span> Again.</h1>
-          <p class="lead">Playlist Progress Saver remembers the exact playlist, video, and timestamp you left off at — so resuming takes one click instead of ten minutes of scrolling.</p>
+          <p class="lead">Playlist Progress Saver quietly remembers the exact playlist, video, and timestamp you left off at — down to the second — so resuming takes one click instead of scrolling back through dozens of videos to find your spot.</p>
 
           <div class="hero-actions">
             <a href="#pricing" class="btn btn-primary">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2L2 8.5L12 15L22 8.5L12 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 12.5V17.5L12 21L18 17.5V12.5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
               Add to Chrome — It's Free
             </a>
-            <a href="#features" class="btn btn-secondary">See Features</a>
+            <a href="#features" class="btn btn-secondary">View Features</a>
           </div>
 
           <div class="hero-meta">
@@ -133,36 +123,8 @@
               </div>
             </div>
             <div class="extension-popup">
-              <div class="popup-header">
-                <svg class="logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-                  <rect width="32" height="32" rx="8" fill="url(#popupGrad)"/>
-                  <path d="M12.5 10.5L21 15.7C21.7 16.1 21.7 17.1 21 17.5L12.5 22.7C11.8 23.1 11 22.6 11 21.8V11.4C11 10.6 11.8 10.1 12.5 10.5Z" fill="white"/>
-                  <defs>
-                    <linearGradient id="popupGrad" x1="0" y1="0" x2="32" y2="32">
-                      <stop stop-color="#2563EB"/>
-                      <stop offset="1" stop-color="#3B82F6"/>
-                    </linearGradient>
-                  </defs>
-                </svg>
-                <span>Playlist Progress Saver</span>
-              </div>
-              <div class="popup-row">
-                <div>
-                  <div class="row-title">CS50 — Full Course</div>
-                  <div class="row-sub">Lecture 7 of 24</div>
-                </div>
-                <span class="timestamp-chip">12:34:07</span>
-              </div>
-              <div class="popup-row">
-                <div>
-                  <div class="row-title">Spanish for Beginners</div>
-                  <div class="row-sub">Lesson 3 of 40</div>
-                </div>
-                <span class="timestamp-chip">04:12:55</span>
-              </div>
-              <div class="popup-cta">
-                <a href="#pricing" class="btn btn-primary btn-block">Resume Watching</a>
-              </div>
+              <!-- Drop in a real screenshot by replacing this file — the markup never needs to change. -->
+              <img src="assets/images/screenshots/hero-popup.svg" alt="Placeholder for the Playlist Progress Saver extension popup screenshot" width="800" height="460" loading="eager" />
             </div>
           </div>
         </div>
@@ -198,21 +160,21 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
             </div>
             <h3>You forget where you stopped</h3>
-            <p>Close the tab, come back tomorrow, and the exact video — let alone the exact second — is gone.</p>
+            <p>Close the tab, come back tomorrow, and the exact video — let alone the exact second — is gone. You're left guessing whether you watched half of lecture 12 or all of it, so you either rewatch material you already know or skip ahead and miss something important.</p>
           </div>
           <div class="problem-card reveal">
             <div class="problem-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="M20 20l-4.5-4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
             </div>
             <h3>You search through hundreds of videos</h3>
-            <p>Course playlists run 40, 100, even 200 videos deep. Scrolling to find "the one" wastes real time.</p>
+            <p>Course playlists run 40, 100, even 200 videos deep. Scrolling to find "the one" wastes real time you could be spending actually learning — and it only gets worse the longer the playlist and the further into it you are.</p>
           </div>
           <div class="problem-card reveal">
             <div class="problem-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 19V5a1 1 0 011-1h9l6 6v9a1 1 0 01-1 1H5a1 1 0 01-1-1z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 14l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <h3>Your timestamps disappear</h3>
-            <p>YouTube's own "continue watching" is unreliable across playlists, devices, and sign-outs.</p>
+            <p>YouTube's own "continue watching" is unreliable across playlists, devices, and sign-outs, and it doesn't understand playlists as a sequence at all. Sign out, switch devices, or watch something else in between, and your place in that 40-part course is the first thing to go.</p>
           </div>
         </div>
       </div>
@@ -233,70 +195,70 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5v14l11-7L8 5z" fill="white"/></svg>
             </div>
             <h3>Resume Instantly</h3>
-            <p>One click drops you back into the exact video and timestamp, no scrubbing required.</p>
+            <p>One click drops you back into the exact video and timestamp, no scrubbing required. You save the minutes you'd otherwise spend hunting for your spot, every single time you sit down to watch.</p>
           </div>
           <div class="feature-card reveal">
             <div class="feature-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13l4 4L19 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </div>
             <h3>Auto Save</h3>
-            <p>Your position saves silently in the background every few seconds. Nothing to click, nothing to lose.</p>
+            <p>Your position saves silently in the background every few seconds. Nothing to click, nothing to lose — even if a tab crashes or you close the browser mid-video.</p>
           </div>
           <div class="feature-card reveal">
             <div class="feature-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2" stroke="white" stroke-width="1.8"/><path d="M4 10h16" stroke="white" stroke-width="1.8"/></svg>
             </div>
             <h3>Track Playlists</h3>
-            <p>Track any number of playlists at once and see progress across every one at a glance.</p>
+            <p>Track any number of playlists at once and see progress across every one at a glance. It's the difference between juggling five open courses in your head and seeing them laid out in one place.</p>
           </div>
           <div class="feature-card reveal">
             <div class="feature-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15.8 7.1 18.2l.9-5.5-4-3.9L9.5 8 12 3z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/></svg>
             </div>
             <h3>Tags</h3>
-            <p>Label playlists as "Work," "Course," or "Music" so your library stays organized as it grows.</p>
+            <p>Label playlists as "Work," "Course," or "Music" so your library stays organized as it grows. Finding the right playlist becomes a filter, not a scroll.</p>
           </div>
           <div class="feature-card reveal">
             <div class="feature-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="7" height="7" rx="1.5" stroke="white" stroke-width="1.6"/><rect x="14" y="5" width="7" height="7" rx="1.5" stroke="white" stroke-width="1.6"/><rect x="3" y="16" width="7" height="4" rx="1.5" stroke="white" stroke-width="1.6"/><rect x="14" y="16" width="7" height="4" rx="1.5" stroke="white" stroke-width="1.6"/></svg>
             </div>
             <h3>Categories</h3>
-            <p>Group playlists into categories like "Learning" or "Entertainment" to keep long lists scannable.</p>
+            <p>Group playlists into categories like "Learning" or "Entertainment" to keep long lists scannable. Your dashboard stays useful even after you've tracked fifty playlists instead of five.</p>
           </div>
           <div class="feature-card reveal">
             <div class="feature-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="7" cy="12" r="3" stroke="white" stroke-width="1.6"/><circle cx="17" cy="7" r="3" stroke="white" stroke-width="1.6"/><circle cx="17" cy="17" r="3" stroke="white" stroke-width="1.6"/></svg>
             </div>
             <h3>Colors</h3>
-            <p>Assign a color to each playlist for instant recognition when you have dozens tracked.</p>
+            <p>Assign a color to each playlist for instant recognition when you have dozens tracked. A quick glance tells you which is which before you even read the title.</p>
           </div>
           <div class="feature-card reveal">
             <div class="feature-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v11m0 0l-4-4m4 4l4-4" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 17v2a1 1 0 001 1h12a1 1 0 001-1v-2" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg>
             </div>
             <h3>Import / Export JSON</h3>
-            <p>Your saved progress is yours — back it up or move it between machines with a single JSON file.</p>
+            <p>Your saved progress is yours — back it up or move it between machines with a single JSON file. No account or cloud dependency required to keep your data safe.</p>
           </div>
           <div class="feature-card reveal">
             <div class="feature-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 14.5A8 8 0 119.5 4a6.5 6.5 0 0010.5 10.5z" stroke="white" stroke-width="1.6" stroke-linejoin="round"/></svg>
             </div>
             <h3>Dark Mode</h3>
-            <p>An interface that's easy on the eyes during late-night study sessions or long watch marathons.</p>
+            <p>An interface that's easy on the eyes during late-night study sessions or long watch marathons. It also matches the theme most people already watch YouTube in.</p>
           </div>
           <div class="feature-card reveal">
             <div class="feature-icon">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4.5" stroke="white" stroke-width="1.6"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" stroke="white" stroke-width="1.6" stroke-linecap="round"/></svg>
             </div>
             <h3>Light Mode</h3>
-            <p>A crisp, bright interface for whenever you'd rather work in daylight.</p>
+            <p>A crisp, bright interface for whenever you'd rather work in daylight. Switching takes one click, and your data looks exactly the same either way.</p>
           </div>
         </div>
 
         <div class="section-heading reveal" style="margin-top: var(--space-10); margin-bottom: 0;">
           <span class="eyebrow">Under the hood</span>
           <h2 style="font-size: var(--text-2xl);">Native YouTube Integration</h2>
-          <p>No separate app, no extra tab. Playlist Progress Saver lives quietly inside YouTube itself, reading playlist and timestamp data as you watch.</p>
+          <p>No separate app, no extra tab, no copy-pasting links. Playlist Progress Saver lives quietly inside YouTube itself, reading playlist and timestamp data directly from the page as you watch — so the experience feels like a part of YouTube rather than a tool bolted on top of it.</p>
         </div>
       </div>
     </section>
@@ -307,28 +269,29 @@
         <div class="section-heading reveal">
           <span class="eyebrow">How it works</span>
           <h2>Four steps. Zero setup after that.</h2>
+          <p>There's no configuration, no linking accounts, and nothing to remember to do. Track a playlist once and Playlist Progress Saver takes care of the rest.</p>
         </div>
 
         <div class="steps-grid">
           <div class="step-card reveal">
             <div class="step-index">01</div>
             <h3>Track a playlist</h3>
-            <p>Open any YouTube playlist and click "Track" from the extension popup.</p>
+            <p>Open any YouTube playlist and click "Track" from the extension popup. It's a one-time action per playlist — no settings to configure.</p>
           </div>
           <div class="step-card reveal">
             <div class="step-index">02</div>
             <h3>Watch normally</h3>
-            <p>Keep watching the way you already do — nothing changes about the YouTube player.</p>
+            <p>Keep watching the way you already do — nothing changes about the YouTube player, the layout, or how videos play.</p>
           </div>
           <div class="step-card reveal">
             <div class="step-index">03</div>
             <h3>Progress saves automatically</h3>
-            <p>Every few seconds, your current video and timestamp are quietly stored.</p>
+            <p>Every few seconds, your current video and timestamp are quietly stored in the background, with no prompts or pop-ups to interrupt you.</p>
           </div>
           <div class="step-card reveal">
             <div class="step-index">04</div>
             <h3>Resume instantly</h3>
-            <p>Open the popup any time and jump straight back to the exact second you left.</p>
+            <p>Open the popup any time and jump straight back to the exact second you left, on this device or wherever you track it again.</p>
           </div>
         </div>
       </div>
@@ -340,19 +303,21 @@
         <div class="section-heading reveal">
           <span class="eyebrow">Pricing</span>
           <h2>Start free. Upgrade when you need more.</h2>
-          <p>No account required to get started.</p>
+          <p>No account required to get started. Every plan keeps your data local and private — Premium simply adds more room to grow and features that are on the way.</p>
         </div>
 
         <div class="pricing-grid">
           <div class="price-card reveal">
             <span class="price-plan-name">Free</span>
             <div class="price-value">$0<span> / forever</span></div>
-            <p class="price-note">Everything you need to get started with a couple of active playlists.</p>
+            <p class="price-note">Everything you need to get started with a couple of active playlists — no trial, no time limit, no credit card.</p>
             <ul class="price-features">
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Track up to <strong>2 playlists</strong></li>
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Auto Save</li>
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Resume Progress</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Tags, Categories &amp; Colors</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Tags</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Categories</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Colors</li>
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Import / Export JSON</li>
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Dark Mode</li>
             </ul>
@@ -360,16 +325,16 @@
           </div>
 
           <div class="price-card is-premium reveal">
-            <span class="premium-badge">Premium</span>
+            <span class="premium-badge">Coming Soon</span>
             <span class="price-plan-name">Premium</span>
             <div class="price-value">Coming Soon</div>
-            <p class="price-note">For anyone tracking playlists across every device they own.</p>
+            <p class="price-note">For anyone tracking playlists across every device they own. Payments aren't live yet — this plan is shown so you know what's on the roadmap.</p>
             <ul class="price-features">
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> <strong>Unlimited</strong> playlists</li>
               <li class="is-future"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> Cloud Sync <em>(future)</em></li>
               <li class="is-future"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg> Automatic Backup <em>(future)</em></li>
               <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Priority Support</li>
-              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Early Feature Access</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg> Early Access to New Features</li>
             </ul>
             <button class="btn btn-premium btn-block is-disabled" disabled>Upgrade to Premium — Coming Soon</button>
           </div>
@@ -383,68 +348,56 @@
         <div class="section-heading reveal">
           <span class="eyebrow">Inside the extension</span>
           <h2>A closer look at the interface.</h2>
+          <p>Real screenshots are on the way — each placeholder below marks exactly where they'll go, so you can see how the finished page will flow.</p>
         </div>
 
         <div class="screens-grid">
           <div class="screen-card reveal">
-            <div class="screen-chrome"><span class="browser-dot" style="background:#cbd5e1;"></span><span class="browser-dot" style="background:#cbd5e1;"></span><span class="browser-dot" style="background:#cbd5e1;"></span></div>
+            <div class="screen-chrome"><span class="browser-dot" style="background:#d0d0d0;"></span><span class="browser-dot" style="background:#d0d0d0;"></span><span class="browser-dot" style="background:#d0d0d0;"></span></div>
             <div class="screen-body">
-              <svg width="180" height="120" viewBox="0 0 180 120" fill="none" aria-hidden="true">
-                <rect x="0" y="0" width="180" height="120" rx="10" fill="#0F172A"/>
-                <rect x="14" y="14" width="90" height="10" rx="3" fill="#2563EB"/>
-                <rect x="14" y="34" width="152" height="1" fill="#24304A"/>
-                <rect x="14" y="46" width="110" height="8" rx="2" fill="#94A3B8"/>
-                <rect x="14" y="60" width="70" height="7" rx="2" fill="#475569"/>
-                <rect x="130" y="58" width="36" height="12" rx="6" fill="#F59E0B" opacity="0.85"/>
-              </svg>
+              <img src="assets/images/screenshots/popup.svg" alt="Placeholder for a screenshot of the extension popup" width="800" height="500" loading="lazy" />
             </div>
-            <div class="screen-caption"><strong>Popup UI</strong>See tracked playlists and jump back in from anywhere.</div>
+            <div class="screen-caption"><strong>Extension Popup</strong>See tracked playlists and jump back in from anywhere, right from the toolbar.</div>
           </div>
 
           <div class="screen-card reveal">
-            <div class="screen-chrome"><span class="browser-dot" style="background:#cbd5e1;"></span><span class="browser-dot" style="background:#cbd5e1;"></span><span class="browser-dot" style="background:#cbd5e1;"></span></div>
+            <div class="screen-chrome"><span class="browser-dot" style="background:#d0d0d0;"></span><span class="browser-dot" style="background:#d0d0d0;"></span><span class="browser-dot" style="background:#d0d0d0;"></span></div>
             <div class="screen-body">
-              <svg width="180" height="120" viewBox="0 0 180 120" fill="none" aria-hidden="true">
-                <rect x="0" y="0" width="180" height="120" rx="10" fill="#0F172A"/>
-                <rect x="14" y="14" width="60" height="10" rx="3" fill="#F8FAFC"/>
-                <circle cx="150" cy="19" r="10" fill="#2563EB"/>
-                <rect x="14" y="40" width="152" height="18" rx="6" fill="#16213A" stroke="#24304A"/>
-                <rect x="14" y="64" width="152" height="18" rx="6" fill="#16213A" stroke="#24304A"/>
-                <rect x="14" y="88" width="80" height="18" rx="6" fill="#2563EB"/>
-              </svg>
+              <img src="assets/images/screenshots/playlist-tracking.svg" alt="Placeholder for a screenshot of playlist tracking" width="800" height="500" loading="lazy" />
             </div>
-            <div class="screen-caption"><strong>Settings</strong>Toggle Dark Mode, manage tags, colors and export options.</div>
+            <div class="screen-caption"><strong>Playlist Tracking</strong>Every tracked playlist shows live watch progress, so you know what's finished and what's next.</div>
           </div>
 
           <div class="screen-card reveal">
-            <div class="screen-chrome"><span class="browser-dot" style="background:#cbd5e1;"></span><span class="browser-dot" style="background:#cbd5e1;"></span><span class="browser-dot" style="background:#cbd5e1;"></span></div>
+            <div class="screen-chrome"><span class="browser-dot" style="background:#d0d0d0;"></span><span class="browser-dot" style="background:#d0d0d0;"></span><span class="browser-dot" style="background:#d0d0d0;"></span></div>
             <div class="screen-body">
-              <svg width="180" height="120" viewBox="0 0 180 120" fill="none" aria-hidden="true">
-                <rect x="0" y="0" width="180" height="120" rx="10" fill="#0F172A"/>
-                <rect x="14" y="16" width="152" height="14" rx="4" fill="#16213A"/>
-                <rect x="14" y="16" width="60" height="14" rx="4" fill="#2563EB"/>
-                <rect x="14" y="40" width="152" height="14" rx="4" fill="#16213A"/>
-                <rect x="14" y="40" width="100" height="14" rx="4" fill="#22C55E"/>
-                <rect x="14" y="64" width="152" height="14" rx="4" fill="#16213A"/>
-                <rect x="14" y="64" width="30" height="14" rx="4" fill="#F59E0B"/>
-              </svg>
+              <img src="assets/images/screenshots/settings.svg" alt="Placeholder for a screenshot of the settings panel" width="800" height="500" loading="lazy" />
             </div>
-            <div class="screen-caption"><strong>Playlist Tracking</strong>Every tracked playlist shows live watch progress.</div>
+            <div class="screen-caption"><strong>Settings</strong>Toggle Dark Mode, manage tags and colors, and control import/export in one place.</div>
           </div>
 
           <div class="screen-card reveal">
-            <div class="screen-chrome"><span class="browser-dot" style="background:#cbd5e1;"></span><span class="browser-dot" style="background:#cbd5e1;"></span><span class="browser-dot" style="background:#cbd5e1;"></span></div>
+            <div class="screen-chrome"><span class="browser-dot" style="background:#d0d0d0;"></span><span class="browser-dot" style="background:#d0d0d0;"></span><span class="browser-dot" style="background:#d0d0d0;"></span></div>
             <div class="screen-body">
-              <svg width="180" height="120" viewBox="0 0 180 120" fill="none" aria-hidden="true">
-                <rect x="0" y="0" width="180" height="120" rx="10" fill="#0F172A"/>
-                <circle cx="40" cy="60" r="26" stroke="#2563EB" stroke-width="6" fill="none" stroke-dasharray="120" stroke-dashoffset="40"/>
-                <text x="40" y="65" fill="#F8FAFC" font-size="11" text-anchor="middle" font-family="monospace">62%</text>
-                <rect x="86" y="30" width="80" height="10" rx="3" fill="#94A3B8"/>
-                <rect x="86" y="50" width="80" height="10" rx="3" fill="#475569"/>
-                <rect x="86" y="70" width="50" height="10" rx="3" fill="#F59E0B"/>
-              </svg>
+              <img src="assets/images/screenshots/resume-progress.svg" alt="Placeholder for a screenshot of resuming progress" width="800" height="500" loading="lazy" />
             </div>
-            <div class="screen-caption"><strong>Resume Dashboard</strong>An overview of everything in progress, at a glance.</div>
+            <div class="screen-caption"><strong>Resume Progress</strong>One click jumps straight to the exact video and timestamp you left off at.</div>
+          </div>
+
+          <div class="screen-card reveal">
+            <div class="screen-chrome"><span class="browser-dot" style="background:#d0d0d0;"></span><span class="browser-dot" style="background:#d0d0d0;"></span><span class="browser-dot" style="background:#d0d0d0;"></span></div>
+            <div class="screen-body">
+              <img src="assets/images/screenshots/premium-upgrade.svg" alt="Placeholder for a screenshot of the premium upgrade screen" width="800" height="500" loading="lazy" />
+            </div>
+            <div class="screen-caption"><strong>Premium Upgrade</strong>A preview of what's coming with Premium — unlimited playlists and Cloud Sync.</div>
+          </div>
+
+          <div class="screen-card reveal">
+            <div class="screen-chrome"><span class="browser-dot" style="background:#d0d0d0;"></span><span class="browser-dot" style="background:#d0d0d0;"></span><span class="browser-dot" style="background:#d0d0d0;"></span></div>
+            <div class="screen-body">
+              <img src="assets/images/screenshots/dark-mode.svg" alt="Placeholder for a screenshot of dark mode" width="800" height="500" loading="lazy" />
+            </div>
+            <div class="screen-caption"><strong>Dark Mode</strong>A comfortable, low-glare interface built for late-night sessions.</div>
           </div>
         </div>
       </div>
@@ -456,6 +409,7 @@
         <div class="section-heading reveal">
           <span class="eyebrow">FAQ</span>
           <h2>Questions, answered.</h2>
+          <p>Everything people usually ask before installing — if yours isn't here, reach out through Support below.</p>
         </div>
 
         <div class="faq-list">
@@ -488,6 +442,24 @@
           </div>
           <div class="faq-item reveal">
             <button class="faq-question" aria-expanded="false">
+              Will it slow down YouTube or use a lot of memory?
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>No. The extension only reads playlist and timestamp data that's already on the page you're viewing — it doesn't run in the background on tabs you're not using, and it adds no noticeable load time to YouTube itself.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              How is this different from YouTube's own "Continue Watching"?
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>YouTube's built-in history is unreliable across long playlists and doesn't track playlist position specifically. Playlist Progress Saver is purpose-built for playlists — it remembers the exact playlist, video, and second, and lets you organize, tag, and manage that progress yourself.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
               Can I export my progress?
               <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
             </button>
@@ -497,11 +469,29 @@
           </div>
           <div class="faq-item reveal">
             <button class="faq-question" aria-expanded="false">
+              What happens to my data if I uninstall the extension?
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Uninstalling removes the extension's local storage along with it. If you'd like to keep your history, export it to JSON first from the popup — you can re-import it later if you reinstall.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
+              Does it work on mobile Chrome or other browsers?
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Playlist Progress Saver is a Chrome extension, so it currently runs on desktop Chrome and other Chromium-based browsers that support Chrome extensions. Mobile browser support isn't available yet, since mobile Chrome doesn't support extensions.</p>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">
               Will cloud sync be available?
               <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
             </button>
             <div class="faq-answer">
-              <p>Cloud Sync and Automatic Backup are planned Premium features. They are not available yet — Premium is currently marked "Coming Soon."</p>
+              <p>Cloud Sync and Automatic Backup are planned Premium features. They are not available yet — Premium is currently marked "Coming Soon," and this page will be updated the moment it ships.</p>
             </div>
           </div>
         </div>
@@ -528,17 +518,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#top" class="logo">
-            <svg class="logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <rect width="32" height="32" rx="8" fill="url(#footerGrad)"/>
-              <path d="M12.5 10.5L21 15.7C21.7 16.1 21.7 17.1 21 17.5L12.5 22.7C11.8 23.1 11 22.6 11 21.8V11.4C11 10.6 11.8 10.1 12.5 10.5Z" fill="white"/>
-              <circle cx="20" cy="24" r="2" fill="#F59E0B"/>
-              <defs>
-                <linearGradient id="footerGrad" x1="0" y1="0" x2="32" y2="32">
-                  <stop stop-color="#2563EB"/>
-                  <stop offset="1" stop-color="#3B82F6"/>
-                </linearGradient>
-              </defs>
-            </svg>
+            <img class="logo-mark" src="assets/images/logo/icon128.png" alt="" width="121" height="99" />
             Playlist Progress Saver
           </a>
           <p>A Chrome extension that remembers your exact place in every YouTube playlist you watch.</p>
