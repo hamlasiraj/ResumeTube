@@ -29,6 +29,11 @@
   /* Borders */
   --color-border: #e5e5e5;
 
+  /* Header / misc surface tokens (swapped per-theme) */
+  --color-header-bg: rgba(248, 250, 252, 0.72);
+  --color-icon-bg: #f0f0f0;
+  --color-icon-fg: #555555;
+
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
   --gradient-premium: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
@@ -79,6 +84,36 @@
   --container-width: 1180px;
   --nav-height: 76px;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  color-scheme: light;
+}
+
+/* ----------------------------- Dark theme -------------------------------
+   Everything in the site is built on the tokens above, so re-pointing them
+   here is enough to re-theme nav, hero, cards, buttons, FAQ, and screenshots
+   in one place. The Pricing, Final CTA, and Footer sections intentionally
+   stay on the separate --color-dark-* / --color-text-on-dark* tokens in both
+   themes — that's an always-dark accent band by design, not a bug, so it
+   never goes "wrong-colored" when the toggle flips.
+   ------------------------------------------------------------------------ */
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-bg: #0f0f0f;
+  --color-bg-alt: #161616;
+  --color-surface: #1a1a1c;
+  --color-text: #f1f1f1;
+  --color-text-secondary: #a3a3a3;
+  --color-border: #2b2b2d;
+
+  --color-header-bg: rgba(15, 15, 15, 0.78);
+  --color-icon-bg: #232325;
+  --color-icon-fg: #cfcfcf;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.55);
+  --shadow-glow: 0 0 0 1px rgba(255, 59, 48, 0.14), 0 20px 48px rgba(255, 59, 48, 0.22);
 }
 
 /* -------------------------------- Reset -------------------------------- */
@@ -101,6 +136,18 @@ body {
   background: var(--color-bg);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  transition: background-color 0.25s var(--ease-out), color 0.25s var(--ease-out);
+}
+
+/* Smooth ~250ms theme transition for every themed surface. Elements with a
+   more specific transition below (buttons, cards, header) extend this list
+   rather than losing it, so hover/scroll animations keep working alongside
+   the theme fade. */
+*,
+*::before,
+*::after {
+  transition: background-color 0.25s var(--ease-out), border-color 0.25s var(--ease-out),
+    color 0.25s var(--ease-out), fill 0.25s var(--ease-out);
 }
 
 img {
@@ -249,7 +296,8 @@ html.js .reveal:not(.is-visible) {
   padding: 0.85rem 1.6rem;
   border-radius: var(--radius-md);
   border: 1px solid transparent;
-  transition: transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out), background 0.2s var(--ease-out);
+  transition: transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out), background 0.2s var(--ease-out),
+    color 0.2s var(--ease-out), border-color 0.2s var(--ease-out);
   white-space: nowrap;
 }
 
@@ -279,7 +327,7 @@ html.js .reveal:not(.is-visible) {
 .btn-secondary:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
-  border-color: #cccccc;
+  border-color: var(--color-text-secondary);
 }
 
 .btn-ghost {
@@ -322,11 +370,12 @@ html.js .reveal:not(.is-visible) {
   height: var(--nav-height);
   display: flex;
   align-items: center;
-  background: rgba(248, 250, 252, 0.72);
+  background: var(--color-header-bg);
   backdrop-filter: blur(14px) saturate(160%);
   -webkit-backdrop-filter: blur(14px) saturate(160%);
   border-bottom: 1px solid transparent;
-  transition: border-color 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+  transition: border-color 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out),
+    background-color 0.3s var(--ease-out);
 }
 
 .site-header.is-scrolled {
@@ -394,6 +443,40 @@ html.js .reveal:not(.is-visible) {
   display: flex;
   align-items: center;
   gap: var(--space-4);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out),
+    background-color 0.25s var(--ease-out), border-color 0.25s var(--ease-out), color 0.25s var(--ease-out);
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  color: var(--color-primary);
+}
+
+.theme-icon-moon {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-icon-sun {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-icon-moon {
+  display: block;
 }
 
 .nav-toggle {
@@ -472,113 +555,44 @@ html.js .reveal:not(.is-visible) {
   letter-spacing: 2px;
 }
 
-/* --- Hero mockup: fake extension popup anchored to a fake YouTube frame --- */
+/* --- Hero screenshot frame --- */
 .hero-visual {
   position: relative;
   display: flex;
   justify-content: center;
 }
 
-.browser-frame {
+.hero-shot {
   width: 100%;
-  max-width: 460px;
+  max-width: 560px;
   border-radius: var(--radius-lg);
-  background: var(--color-dark-bg);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
   box-shadow: var(--shadow-lg);
   overflow: hidden;
-  transform: perspective(1200px) rotateY(-4deg) rotateX(2deg);
   animation: float 7s ease-in-out infinite;
+  transition: transform 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out),
+    background-color 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+}
+
+.hero-shot:hover {
+  box-shadow: var(--shadow-glow);
 }
 
 @keyframes float {
-  0%, 100% { transform: perspective(1200px) rotateY(-4deg) rotateX(2deg) translateY(0); }
-  50% { transform: perspective(1200px) rotateY(-4deg) rotateX(2deg) translateY(-10px); }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
-.browser-chrome {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-3) var(--space-4);
-  background: #1c1c1c;
-}
-
-.browser-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #4a4a4a;
-}
-
-.video-surface {
-  aspect-ratio: 16 / 9;
-  background: linear-gradient(140deg, #1e1e1e 0%, #0f0f0f 100%);
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.video-surface .play-glyph {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background: rgba(248, 250, 252, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(4px);
-}
-
-.progress-track {
-  position: absolute;
-  left: var(--space-4);
-  right: var(--space-4);
-  bottom: var(--space-4);
-  height: 4px;
-  background: rgba(248, 250, 252, 0.2);
-  border-radius: var(--radius-full);
-}
-
-.progress-fill {
-  position: absolute;
-  inset: 0;
-  width: 42%;
-  background: var(--color-primary);
-  border-radius: var(--radius-full);
-}
-
-.progress-pin {
-  position: absolute;
-  left: 42%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--color-premium);
-  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.22);
-}
-
-.extension-popup {
-  margin: -30px var(--space-5) var(--space-5);
-  position: relative;
-  background: var(--color-dark-surface);
-  border: 1px solid var(--color-dark-border);
-  border-radius: var(--radius-md);
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
-}
-
-.extension-popup img {
+.hero-shot img {
   display: block;
   width: 100%;
   height: auto;
   transition: transform 0.4s var(--ease-out);
 }
 
-.browser-frame:hover .extension-popup img {
-  transform: scale(1.02);
+.hero-shot:hover img {
+  transform: scale(1.015);
 }
 
 .timestamp-chip {
@@ -637,7 +651,8 @@ html.js .reveal:not(.is-visible) {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
-  transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out),
+    background-color 0.25s var(--ease-out), border-color 0.25s var(--ease-out), color 0.25s var(--ease-out);
 }
 
 .problem-card:hover {
@@ -649,8 +664,8 @@ html.js .reveal:not(.is-visible) {
   width: 44px;
   height: 44px;
   border-radius: var(--radius-sm);
-  background: #f0f0f0;
-  color: #555555;
+  background: var(--color-icon-bg);
+  color: var(--color-icon-fg);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -684,7 +699,8 @@ html.js .reveal:not(.is-visible) {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
-  transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out), border-color 0.25s var(--ease-out),
+    background-color 0.25s var(--ease-out), color 0.25s var(--ease-out);
 }
 
 .feature-card:hover {
@@ -876,8 +892,16 @@ html.js .reveal:not(.is-visible) {
 
 .screens-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--space-6);
+}
+
+/* Odd one out on the last row (9 cards / 2 cols) spans centered rather than
+   stretching full-width, so the grid never looks lopsided. */
+.screens-grid .screen-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  max-width: calc(50% - var(--space-3));
+  margin-inline: auto;
 }
 
 .screen-card {
@@ -886,7 +910,8 @@ html.js .reveal:not(.is-visible) {
   border: 1px solid var(--color-border);
   background: var(--color-surface);
   box-shadow: var(--shadow-sm);
-  transition: box-shadow 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+  transition: box-shadow 0.25s var(--ease-out), transform 0.25s var(--ease-out),
+    background-color 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
 }
 
 .screen-card:hover {
@@ -894,17 +919,8 @@ html.js .reveal:not(.is-visible) {
   box-shadow: var(--shadow-md);
 }
 
-.screen-chrome {
-  display: flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: var(--space-3) var(--space-4);
-  background: var(--color-bg-alt);
-  border-bottom: 1px solid var(--color-border);
-}
-
 .screen-body {
-  aspect-ratio: 16/10;
+  aspect-ratio: 3 / 2;
   background: var(--color-bg-alt);
   display: flex;
   align-items: center;
@@ -1206,6 +1222,12 @@ html.js .reveal:not(.is-visible) {
   .steps-grid,
   .screens-grid {
     grid-template-columns: 1fr;
+  }
+
+  .screens-grid .screen-card:last-child:nth-child(odd) {
+    grid-column: auto;
+    max-width: none;
+    margin-inline: 0;
   }
 
   .footer-grid {
